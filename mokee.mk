@@ -6,6 +6,8 @@ $(call inherit-product, vendor/mk/config/common_full_phone.mk)
 # Enhanced NFC
 $(call inherit-product, vendor/mk/config/nfc_enhanced.mk)
 
+# Overlays (inherit after vendor/mk to ensure we override it)
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 PRODUCT_NAME := mk_h811
 
